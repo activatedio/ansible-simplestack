@@ -1,0 +1,4 @@
+auto {{ item.interface_name }}.{{ item.vlan_name }}
+iface {{ item.interface_name }}.{{ item.vlan_name }} inet static
+  address {{ item.address }}
+  netmask {{ item.netmask }}
