@@ -24,7 +24,7 @@ def test_stack_setup_in_kvm_group(host):
     assert 'kvm' in u.groups
 
 def test_vlan_interface(host):
-    f = host.file('/etc/network/interfaces.d/enp0s25.102')
+    f = host.file('/etc/network/interfaces.d/vlan')
     
     assert f.exists
     assert f.user == 'root'

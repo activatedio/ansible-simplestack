@@ -10,8 +10,8 @@
     simplestack:
       users:
         - stack
-      interfaces:
-        - interface_name: enp0s25
-          vlan_name: 102
-          address: 34.33.33.1
-          netmask: 255.255.255.0
+      interface:
+        interface_name: enp0s25
+        vlan_name: 102
+        address: 34.33.33.1
+        netmask: 255.255.255.0
