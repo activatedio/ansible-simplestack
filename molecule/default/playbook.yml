@@ -1,0 +1,12 @@
+---
+- hosts: all
+  pre_tasks:
+    - name: Create stack user
+      user: 
+        name: stack
+  roles:
+    - role: ansible-simplestack
+  vars:
+    simplestack:
+      users:
+        - stack

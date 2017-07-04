@@ -1,0 +1,19 @@
+---
+# tasks file for simplestack
+- name: Install requisite packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - qemu-kvm
+    - bridge-utils
+    - qemu-utils
+    - libguestfs-tools
+    - uml-utilities
+    - ethtool
+    - unzip
+- name: Install simplestack
+  unarchive:
+    src: https://dl.bintray.com/activatedio/releases/simplestack_0.0.1_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: True
