@@ -17,3 +17,9 @@
     src: https://dl.bintray.com/activatedio/releases/simplestack_0.0.1_linux_amd64.zip
     dest: /usr/local/bin
     remote_src: True
+- name: Setup kvm users
+  user:
+    name: "{{ item }}"
+    groups: kvm
+  with_items: "{{ simplestack.users }}"
+

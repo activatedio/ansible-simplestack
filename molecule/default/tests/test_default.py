@@ -17,3 +17,8 @@ def test_simplestack_installed(host):
     assert f.user == 'root'
     assert f.group == 'root'
     assert f.mode == 0o755
+
+def test_stack_setup_in_kvm_group(host):
+    u = host.user('stack')
+
+    assert 'kvm' in u.groups
