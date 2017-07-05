@@ -7,11 +7,9 @@
   roles:
     - role: ansible-simplestack
   vars:
-    simplestack:
-      users:
-        - stack
-      interface:
-        interface_name: enp0s25
-        vlan_name: 102
-        address: 34.33.33.1
-        netmask: 255.255.255.0
+    simplestack_interface_name: enp0s25
+    simplestack_interface_vlan_name: 102
+    simplestack_interface_address: 34.33.33.1
+    simplestack_interface_netmask: 255.255.255.0
+    simplestack_users:
+      - stack

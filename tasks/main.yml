@@ -18,11 +18,12 @@
     src: https://dl.bintray.com/activatedio/releases/simplestack_0.0.1_linux_amd64.zip
     dest: /usr/local/bin
     remote_src: True
+    creates: /usr/local/bin/simplestack
 - name: Setup kvm users
   user:
     name: "{{ item }}"
     groups: kvm
-  with_items: "{{ simplestack.users }}"
+  with_items: "{{ simplestack_users }}"
 - name: Setup vlan interfaces
   template:
     src: interfaces.d/vlan.j2
@@ -30,5 +31,7 @@
     owner: root
     group: root
     mode: 0644
-
+  when: simplestack_interface_name is defined
+  notify:
+    - restart networking
 

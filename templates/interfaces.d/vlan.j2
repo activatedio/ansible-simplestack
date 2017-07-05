@@ -1,4 +1,4 @@
-auto {{ simplestack.interface.interface_name }}.{{ simplestack.interface.vlan_name }}
-iface {{ simplestack.interface.interface_name }}.{{ simplestack.interface.vlan_name }} inet static
-  address {{ simplestack.interface.address }}
-  netmask {{ simplestack.interface.netmask }}
+auto {{ simplestack_interface_name }}.{{ simplestack_interface_vlan_name }}
+iface {{ simplestack_interface_name }}.{{ simplestack_interface_vlan_name }} inet static
+  address {{ simplestack_interface_address }}
+  netmask {{ simplestack_interface_netmask }}
