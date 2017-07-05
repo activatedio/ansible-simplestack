@@ -23,6 +23,12 @@ def test_stack_setup_in_kvm_group(host):
 
     assert 'kvm' in u.groups
 
+def test_ip_forwarding(host):
+    c = host.run('sysctl net.ipv4.ip_forward')
+
+    assert c.rc == 0
+    assert c.stdout == 'net.ipv4.ip_forward = 1'
+
 def test_vlan_interface(host):
     f = host.file('/etc/network/interfaces.d/vlan')
     
