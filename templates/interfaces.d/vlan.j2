@@ -1,4 +1,5 @@
 auto {{ simplestack_interface_name }}.{{ simplestack_interface_vlan_name }}
 iface {{ simplestack_interface_name }}.{{ simplestack_interface_vlan_name }} inet static
+  vlan_raw_device {{ simplestack_interface_name }}
   address {{ simplestack_interface_address }}
   netmask {{ simplestack_interface_netmask }}
