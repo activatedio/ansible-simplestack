@@ -1,2 +1,4 @@
 ---
 # defaults file for simplestack
+simplestack_version: 0.0.2
+simplestack_arch: linux_amd64
